@@ -1,0 +1,54 @@
+/* Sub CSS Styles */
+.sub-content {
+    padding: 20px;
+}
+
+.sub-title {
+    font-size: 2rem;
+    color: #1e40af;
+    margin-bottom: 1rem;
+}
+
+.sub-description {
+    color: #6b7280;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Additional utility classes */
+.flex {
+    display: flex;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid {
+    display: grid;
+}
+
+.grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.gap-4 {
+    gap: 2rem;
+}
+
+@media (max-width: 768px) {
+    .grid-2,
+    .grid-3 {
+        grid-template-columns: 1fr;
+    }
+    
+    .sub-title {
+        font-size: 1.5rem;
+    }
+}

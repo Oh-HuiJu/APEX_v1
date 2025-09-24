@@ -1,0 +1,35 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: apex
+  
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+    static-path-pattern: /static/**
+  
+  web:
+    resources:
+      static-locations: classpath:/static/
+  
+  security:
+    user:
+      name: admin
+      password: admin123
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+  endpoint:
+    health:
+      show-details: always
+
+logging:
+  level:
+    com.apex: DEBUG
+    org.springframework.security: DEBUG
